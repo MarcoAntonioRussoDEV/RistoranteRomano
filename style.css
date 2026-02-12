@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+    /* H SL values: hue saturation% lightness% (space-separated) */
+    --base-color: 0 0% 7%; /* ~ #141312 */
+    --light-color: 33 22% 90%; /* ~ #ebe6e0 */
+    --primary-color: 348 73% 35%; /* ~ #9b1833 */
+    --accent-color: 32 74% 46%; /* ~ #ce7d1f */
+    --muted-color: 78 5% 58%; /* ~ #96998f */
+}
+
+/* Background Colors */
+.bg-base {
+    background-color: hsl(var(--base-color));
+}
+
+.bg-primary {
+    background-color: hsl(var(--primary-color));
+}
+
+.bg-accent {
+    background-color: hsl(var(--accent-color));
+}
+
+.bg-muted {
+    background-color: hsl(var(--muted-color));
+}
+
+/* Text Colors */
+.text-light {
+    color: hsl(var(--light-color));
+}
+
+.text-primary {
+    color: hsl(var(--primary-color));
+}
+
+.text-accent {
+    color: hsl(var(--accent-color));
+}
+
+.text-muted {
+    color: hsl(var(--muted-color));
+}
+
+.bg-gradient-hero {
+    background-image: linear-gradient(
+        to bottom,
+        hsl(var(--base-color) / 0.5),
+        hsl(var(--base-color) / 0.8),
+        hsl(var(--base-color))
+    );
+}
+
+/* Border Colors */
+.border-base {
+    border-color: hsl(var(--base-color));
+}
+
+.border-primary {
+    border-color: hsl(var(--primary-color));
+}
+
+/* animation for scroll-top icon */
+
+.scroll-top {
+    color: hsl(var(--primary-color));
+    animation: scroll-top 0.5s ease-out infinite;
+}
+
+@keyframes scroll-top {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Hearts animation */
+#hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 50;
+}
+
+.heart {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transform: translateY(0) translateX(0) rotate(0deg);
+    animation-name: float-up;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    color: hsl(var(--primary-color) / 0.1);
+    text-shadow: 0px 0px 2px hsl(var(--primary-color));
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateY(-120vh) translateX(var(--drift, 0px))
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.heart.small {
+    font-size: 12px;
+}
+.heart.medium {
+    font-size: 20px;
+}
+.heart.large {
+    font-size: 32px;
+}

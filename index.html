@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="style.css"
+        />
+
+        <title>Romano</title>
+    </head>
+    <body class="bg-base text-light h-[10000px]">
+        <div
+            id="hearts"
+            aria-hidden="true"
+        ></div>
+        <header>
+            <!-- Navbar -->
+            <nav
+                class="p-2 border-b border-primary bg-base opacity-95 fixed w-full top-0 z-50"
+            >
+                <article
+                    class="container mx-auto w-full flex justify-between items-center"
+                >
+                    <div class="uppercase flex items-center space-x-2">
+                        <i class="fas fa-heart text-red-600 text-4xl"></i>
+                        <div>
+                            <h1 class="text-4xl">Romano</h1>
+                            <small>ristorante · est. 1985</small>
+                        </div>
+                    </div>
+                    <ul class="flex space-x-4 text-lg uppercase">
+                        <li>home</li>
+                        <li>menu</li>
+                        <li>chi siamo</li>
+                        <li>contatti</li>
+                    </ul>
+                </article>
+            </nav>
+        </header>
+        <main class="flex flex-col gap-80">
+            <section
+                id="home"
+                class="relative min-h-screen flex items-center justify-center overflow-hidden"
+            >
+                <div class="absolute inset-0">
+                    <div class="relative">
+                        <img
+                            src="/img/hero-restaurant.jpg"
+                            alt="restaurant table with roses and candles"
+                            class="w-full h-full object-cover"
+                        />
+                        <div class="absolute inset-0 bg-gradient-hero"></div>
+                    </div>
+                </div>
+                <div class="relative z-10 text-center px-4 max-w-3xl mx-auto">
+                    <div class="flex items-center justify-center gap-3 mb-6">
+                        <div class="h-px w-12 bg-accent"></div>
+                        <i class="fas fa-heart text-red-600"></i>
+                        <span
+                            class="text-accent text-sm uppercase tracking-[0.3em]"
+                            >San Valentino 2026</span
+                        ><i class="fas fa-heart text-red-600"></i>
+                        <div class="h-px w-12 bg-accent"></div>
+                    </div>
+                    <h1
+                        class="text-4xl md:text-6xl lg:text-7xl font-bold text-light leading-tight mb-6 flex flex-col items-center"
+                    >
+                        <span>Una cena per due,</span>
+                        <span class="text-primary">nel cuore di Roma</span>
+                    </h1>
+                    <p
+                        class="text-muted text-lg md:text-xl mb-10 font-light max-w-xl mx-auto"
+                    >
+                        Lasciatevi avvolgere dall'atmosfera romantica del nostro
+                        ristorante e vivete una serata indimenticabile con chi
+                        amate.
+                    </p>
+                    <a
+                        href="#prenota"
+                        class="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded text-sm uppercase tracking-widest hover:bg-primary/90 transition-colors"
+                    >
+                        <i class="fas fa-heart text-light"></i>Prenota la tua
+                        serata speciale</a
+                    >
+                </div>
+            </section>
+            <!-- Chi siamo -->
+            <section
+                id="chi-siamo"
+                class="container mx-auto"
+            >
+                <div class="flex justify-between">
+                    <div class="flex flex-col gap-8">
+                        <div>
+                            <p class="text-muted">
+                                La nostra storia d'amore in cucina
+                            </p>
+                            <h2 class="text-6xl font-light mb-6 text-accent">
+                                <span class="border-b">C</span>hi siamo
+                            </h2>
+                        </div>
+                        <article
+                            class="space-y-4 text-lg text-light max-w-prose flex flex-col gap-8"
+                        >
+                            <p>
+                                Dal 1985, il Ristorante Romano è un punto di
+                                riferimento per gli amanti della vera cucina
+                                italiana. Situato nel cuore storico di Roma e
+                                degli innamorati, il nostro ristorante è un
+                                luogo dove la passione per il cibo e l'amore si
+                                incontrano per creare esperienze culinarie
+                                indimenticabili.
+                            </p>
+                            <p>
+                                I nostri chef selezionano con cura ingredienti
+                                freschi e di alta qualità, trasformandoli in
+                                piatti che raccontano storie d'amore e
+                                tradizione. Dalle classiche paste fatte in casa
+                                ai succulenti secondi di carne e pesce, ogni
+                                portata è un omaggio alla ricca eredità
+                                culinaria italiana.
+                            </p>
+                            <div class="flex gap-24 text-light">
+                                <div class="text-center">
+                                    <p class="text-5xl">38+</p>
+                                    anni di esperienza
+                                </div>
+                                <div class="text-center">
+                                    <p class="text-5xl">12</p>
+                                    chef esperti
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <figure class="w-1/2">
+                        <img
+                            src="./img/piatto-san-valentino.jpg"
+                            alt="Piatto speciale di San Valentino"
+                            class="aspect-square object-cover rounded"
+                        />
+                    </figure>
+                </div>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
