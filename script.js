@@ -1,3 +1,4 @@
+// Hearts animation
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("hearts");
     if (!container) return;

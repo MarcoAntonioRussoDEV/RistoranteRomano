@@ -1,17 +1,22 @@
-@import "tailwindcss";
-
 :root {
     /* H SL values: hue saturation% lightness% (space-separated) */
     --base-color: 0 0% 7%; /* ~ #141312 */
+    --background-color: 0 0% 10%; /* ~ #1a1a1a */
     --light-color: 33 22% 90%; /* ~ #ebe6e0 */
     --primary-color: 348 73% 35%; /* ~ #9b1833 */
     --accent-color: 32 74% 46%; /* ~ #ce7d1f */
     --muted-color: 78 5% 58%; /* ~ #96998f */
+    scroll-behavior: smooth;
+    scroll-padding-top: 16rem;
 }
 
 /* Background Colors */
 .bg-base {
     background-color: hsl(var(--base-color));
+}
+
+.bg-background {
+    background-color: hsl(var(--background-color));
 }
 
 .bg-primary {
@@ -59,6 +64,9 @@
 
 .border-primary {
     border-color: hsl(var(--primary-color));
+}
+.border-accent {
+    border-color: hsl(var(--accent-color));
 }
 
 /* animation for scroll-top icon */
@@ -122,4 +130,39 @@
 }
 .heart.large {
     font-size: 32px;
+}
+
+.title-underline::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-bottom: 2px solid hsl(var(--accent-color));
+    width: 16%;
+    margin-inline: auto;
+}
+
+.card {
+    border: 1px solid hsl(var(--primary-color) / 0.5);
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease;
+    overflow: hidden;
+
+    &:hover {
+        border-color: hsl(var(--accent-color));
+        transition: border-color 0.3s ease;
+    }
+
+    & img {
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    }
+}
+
+.button:hover {
+    background-color: hsl(var(--primary-color) / 0.7);
+    transition: background-color 0.3s ease;
 }
